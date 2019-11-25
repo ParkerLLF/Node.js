@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>06在浏览器中使用art-template</title>
+</head>
+
+<body>
+  <!-- 引用文件 -->
+  <script src="node_modules/art-template/lib/template-web.js"></script>
+  <script type="text/template" id="tp1">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+    </head>
+    <body>
+      <p>hello {{ name }}</p>
+      <p>我今年 {{ age }}岁了</p>
+      <p>我来自 {{ province }}</p>
+      <p> 我喜欢 {{each hobbies }} {{ $value}} {{/each}}</p>
+    </body>
+    </html>
+  </script>
+
+  <script>
+    var ret = template('tp1', {
+      name: 'Jack',
+      age: 20,
+      province: '四川',
+      hobbies: [
+        'code',
+        'play overwatch',
+        'play basketboll'
+      ]
+    })
+    console.log(ret);
+  </script>
+</body>
+
+</html>
