@@ -1,7 +1,7 @@
 var fs = require('fs'); //引入fs模块
 
 //写入文件，路径是./data/xxx.xx, 第二个参数是文件的内容，第三个参数是回调函数
-fs.writeFile('./data/hi.md', '你好，我是node.js',
+fs.writeFile('./data/hi.md', '你好，我是node.js!!!',
   function (error, data) {
     //如果写入失败了，那么error的值为true
     if (error) {
